@@ -22,7 +22,7 @@ Start the `XLaunch` and adopt the following configuration for particular screens
 * **Specify parameter settings** Clipboard, No Access Control
 
 ## Start the docker container
-We have to provide additional data to the run command of docker.
+We have to provide additional data to the run command of docker. The following commands are executed in the PowerShell.
 
 1. Get the docker container
 ```
@@ -47,7 +47,13 @@ Drahtlos-LAN-Adapter WLAN:
    Standardgateway . . . . . . . . . : ...
 ```
 
-3. Start docker
+3. Define variable
+
+```
+set-variable -name DISPLAY -value 192.168.1.5:0.0
+```
+
+4. Start docker
 
 ```
 docker run -ti --rm -e DISPLAY=$DISPLAY handflucht/guiappindockeronwindows
