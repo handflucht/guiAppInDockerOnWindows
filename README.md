@@ -30,7 +30,6 @@ docker pull handflucht/guiappindockeronwindows
 ```
 
 2. Get the IP of the host
-
 ```
 PS C:\> ipconfig
 
@@ -48,13 +47,11 @@ Drahtlos-LAN-Adapter WLAN:
 ```
 
 3. Define variable
-
 ```
 set-variable -name DISPLAY -value 192.168.1.5:0.0
 ```
 
 4. Start docker
-
 ```
 docker run -ti --rm -e DISPLAY=$DISPLAY handflucht/guiappindockeronwindows
 ```
